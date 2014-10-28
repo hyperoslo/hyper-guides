@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: hyper_guides_development
+
+test:
+  <<: *default
+  database: hyper_guides_test
+
+production:
+  <<: *default
+  database: hyper_guides_production
+  username: hyper_guides
+  password: <%= ENV['HYPER_GUIDES_DATABASE_PASSWORD'] %>
