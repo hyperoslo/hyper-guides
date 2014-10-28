@@ -81,3 +81,8 @@ group :development, :test do
   # Writes validation error messages to the log
   gem 'whiny_validation', '~> 0.1'
 end
+
+group :production do
+  # ngannotate for the Rails asset pipeline
+  gem 'ngannotate-rails', '~> 0.10'
+end
