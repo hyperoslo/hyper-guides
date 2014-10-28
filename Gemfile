@@ -32,6 +32,9 @@ gem 'publishable', '~> 1.0'
 # Full-stack web application framework
 gem 'rails', '4.2.0.beta2'
 
+# A set of Rails responders to dry up your application
+gem 'responders', '~> 2.0'
+
 # Sass adapter for the Rails asset pipeline
 gem 'sass-rails', '~> 5.0.0.beta1'
 
