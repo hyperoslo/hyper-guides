@@ -1,1 +1,1 @@
-angular.module("hyper-guides", ["ngMaterial"])
+angular.module("hyper-guides", ["ngMaterial", "ngResource", "ngSanitize"])

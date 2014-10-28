@@ -5,6 +5,8 @@
 #= require angular
 #= require angular-animate
 #= require angular-aria
+#= require angular-resource
+#= require angular-sanitize
 #= require angular-material
 #= require angular/config
 #= require_tree .
