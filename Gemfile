@@ -5,6 +5,9 @@ ruby '2.1.3'
 # AngularJS assets for the Rails asset pipeline
 gem 'angularjs-rails', '~> 1.3'
 
+# SQL AST manager for Ruby
+gem 'arel', github: 'rails/arel'
+
 # CoffeeScript adapter for the Rails asset pipeline
 gem 'coffee-rails', '~> 4.1'
 
