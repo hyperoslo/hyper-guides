@@ -1,1 +1,1 @@
-angular.module("hyper-guides", [])
+angular.module("hyper-guides", ["ngMaterial"])
