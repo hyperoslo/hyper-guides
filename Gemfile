@@ -11,6 +11,9 @@ gem 'arel', github: 'rails/arel'
 # CoffeeScript adapter for the Rails asset pipeline
 gem 'coffee-rails', '~> 4.1'
 
+# A comprehensive slugging and pretty-URL plugin
+gem 'friendly_id', '~> 5.0'
+
 # Create JSON structures via a Builder-style DSL
 gem 'jbuilder', '~> 2.2'
 
@@ -22,6 +25,9 @@ gem 'lodash-rails', '~> 2.4'
 
 # Ruby interface to the PostgreSQL RDBMS
 gem 'pg', '~> 0.17'
+
+# Adds publishing functionality to your Active Record models
+gem 'publishable', '~> 1.0'
 
 # Full-stack web application framework
 gem 'rails', '4.2.0.beta2'
