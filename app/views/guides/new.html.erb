@@ -6,7 +6,7 @@
   </md-toolbar>
 
   <md-content class="md-content-padding main-content">
-    <form novalidate>
+    <form ng-submit="newGuideCtrl.submit()" novalidate>
       <md-tabs md-theme="indigo" selected="0">
         <md-tab label="Edit">
           <%= render 'form_fields' %>

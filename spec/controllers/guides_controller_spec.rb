@@ -45,4 +45,26 @@ RSpec.describe GuidesController, type: :controller do
     end
   end
 
+  describe "POST create" do
+    def post_create
+      post :create, guide: guide_attrs
+    end
+
+    context "when given a valid set of attributes" do
+      let(:guide_attrs) { attributes_for :guide }
+
+      it "creates a new guide" do
+        expect { post_create }.to change(Guide, :count).by 1
+      end
+    end
+
+    context "when given an invalid set of attributes" do
+      let(:guide_attrs) { { title: nil } } # invalid; title is required
+
+      it "does not creates a new guide" do
+        expect { post_create }.not_to change(Guide, :count)
+      end
+    end
+  end
+
 end
