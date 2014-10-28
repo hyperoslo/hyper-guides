@@ -1,0 +1,30 @@
+<div ng-controller="NewGuideCtrl as newGuideCtrl">
+  <md-toolbar md-theme="indigo">
+    <div class="md-toolbar-tools">
+      <span class="md-flex">Hyper Guides &gt; New Guide</span>
+    </div>
+  </md-toolbar>
+
+  <md-content class="md-content-padding main-content">
+    <form novalidate>
+      <md-tabs md-theme="indigo" selected="0">
+        <md-tab label="Edit">
+          <%= render 'form_fields' %>
+        </md-tab>
+
+        <md-tab label="Preview">
+          <%= render 'preview' %>
+        </md-tab>
+      </md-tabs>
+
+      <md-content class="md-content-padding">
+        <div class="form-actions">
+          <md-button type="submit" class="md-raised md-primary"
+            md-theme="indigo" aria-label="Submit">Submit</md-button>
+          <md-button type="reset" class="md-raised md-warn"
+            md-theme="indigo" aria-label="Reset">Reset</md-button>
+        </div>
+      </md-content>
+    </form>
+  </md-content>
+</div>

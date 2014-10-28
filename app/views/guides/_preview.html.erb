@@ -1,0 +1,19 @@
+<md-content class="md-content-padding">
+  <md-toolbar md-theme="indigo">
+    <div class="md-toolbar-tools">
+      <span class="md-flex" ng-hide="newGuideCtrl.guide.title">
+        <em>No title given</em>
+      </span>
+      <span class="md-flex" ng-show="newGuideCtrl.guide.title">
+        {{ newGuideCtrl.guide.title }}
+      </span>
+    </div>
+  </md-toolbar>
+
+  <md-content ng-hide="newGuideCtrl.guide.body">
+    <p><em>No body text written.</em></p>
+  </md-content>
+
+  <md-content ng-bind-html="newGuideCtrl.guide.body"
+    ng-show="newGuideCtrl.guide.body"></md-content>
+</md-content>

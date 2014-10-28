@@ -6,4 +6,10 @@ class GuidesController < ApplicationController
 
     respond_with @guide
   end
+
+  def new
+    @guide = Guide.new
+
+    respond_with @guide
+  end
 end
