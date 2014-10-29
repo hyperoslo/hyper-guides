@@ -1,5 +1,5 @@
 angular.module("hyper-guides")
-  .controller "GuideCtrl", (Guide) ->
-    @guide = Guide.get id: 2
+  .controller "GuideCtrl", ($route, Guide) ->
+    @guide = Guide.get id: $route.current.pathParams.id
 
     this
