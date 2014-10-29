@@ -88,4 +88,7 @@ end
 group :production do
   # ngannotate for the Rails asset pipeline
   gem 'ngannotate-rails', '~> 0.10'
+
+  # Following best practices from http://12factor.net
+  gem 'rails_12factor', '~> 0.0'
 end
