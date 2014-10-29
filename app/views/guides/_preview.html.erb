@@ -14,6 +14,6 @@
     <p><em>No body text written.</em></p>
   </md-content>
 
-  <md-content ng-bind-html="newGuideCtrl.guide.body"
+  <md-content ng-bind-html="newGuideCtrl.guide.body | markdown"
     ng-show="newGuideCtrl.guide.body"></md-content>
 </md-content>

@@ -1,6 +1,7 @@
 #= require jquery
 #= require jquery_ujs
 #= require lodash
+#= require marked
 #= require hammer
 #= require angular
 #= require angular-animate
