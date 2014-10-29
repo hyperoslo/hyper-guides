@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nb">
+<html lang="nb" ng-app="hyper-guides" ng-controller="MainCtrl as mainCtrl">
   <head>
     <title>Hyper Guides</title>
 
@@ -8,9 +8,9 @@
 
     <%= csrf_meta_tags %>
   </head>
-  <body>
+  <body layout="vertical">
 
-    <%= yield %>
+    <ng-view></ng-view>
 
   </body>
 </html>

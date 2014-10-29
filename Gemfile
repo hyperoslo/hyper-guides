@@ -5,8 +5,14 @@ ruby '2.1.3'
 # AngularJS assets for the Rails asset pipeline
 gem 'angularjs-rails', '~> 1.3'
 
+# SQL AST manager for Ruby
+gem 'arel', github: 'rails/arel'
+
 # CoffeeScript adapter for the Rails asset pipeline
 gem 'coffee-rails', '~> 4.1'
+
+# A comprehensive slugging and pretty-URL plugin
+gem 'friendly_id', '~> 5.0'
 
 # Create JSON structures via a Builder-style DSL
 gem 'jbuilder', '~> 2.2'
@@ -20,8 +26,14 @@ gem 'lodash-rails', '~> 2.4'
 # Ruby interface to the PostgreSQL RDBMS
 gem 'pg', '~> 0.17'
 
+# Adds publishing functionality to your Active Record models
+gem 'publishable', '~> 1.0'
+
 # Full-stack web application framework
 gem 'rails', '4.2.0.beta2'
+
+# A set of Rails responders to dry up your application
+gem 'responders', '~> 2.0'
 
 # Sass adapter for the Rails asset pipeline
 gem 'sass-rails', '~> 5.0.0.beta1'
@@ -71,4 +83,9 @@ group :development, :test do
 
   # Writes validation error messages to the log
   gem 'whiny_validation', '~> 0.1'
+end
+
+group :production do
+  # ngannotate for the Rails asset pipeline
+  gem 'ngannotate-rails', '~> 0.10'
 end

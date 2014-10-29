@@ -1,0 +1,10 @@
+<div ng-controller="GuideCtrl as guideCtrl">
+  <md-toolbar md-theme="indigo">
+    <div class="md-toolbar-tools">
+      <span class="md-flex">Hyper Guides &gt; {{ guideCtrl.guide.title }}</span>
+    </div>
+  </md-toolbar>
+
+  <md-content class="md-content-padding" ng-bind-html="guideCtrl.guide.body | markdown">
+  </md-content>
+</div>
