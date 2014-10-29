@@ -1,4 +1,4 @@
-angular.module("hyper-guides", ["ngMaterial", "ngResource", "ngSanitize"])
+angular.module("hyper-guides", ["ngMaterial", "ngResource", "ngRoute", "ngSanitize"])
   .config ($httpProvider) ->
     authToken = $("meta[name=\"csrf-token\"]").attr("content")
     $httpProvider.defaults.headers.common["X-CSRF-TOKEN"] = authToken

@@ -1,4 +1,6 @@
 class GuidesController < ApplicationController
+  include AngularBootstrapper
+
   respond_to :html, :json
 
   def show

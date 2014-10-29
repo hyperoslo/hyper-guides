@@ -6,6 +6,7 @@
 #= require angular-animate
 #= require angular-aria
 #= require angular-resource
+#= require angular-route
 #= require angular-sanitize
 #= require angular-material
 #= require angular/config
