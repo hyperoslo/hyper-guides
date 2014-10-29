@@ -26,6 +26,9 @@ gem 'lodash-rails', '~> 2.4'
 # Ruby interface to the PostgreSQL RDBMS
 gem 'pg', '~> 0.17'
 
+# Use Pry as your Rails console
+gem 'pry-rails', '~> 0.3'
+
 # Adds publishing functionality to your Active Record models
 gem 'publishable', '~> 1.0'
 
@@ -65,9 +68,6 @@ group :development, :test do
 
   # Fast debugging with Pry
   gem 'pry-byebug', '~> 2.0'
-
-  # Use Pry as your Rails console
-  gem 'pry-rails', '~> 0.3'
 
   # RSpec for Rails
   gem 'rspec-rails', '~> 3.1'
