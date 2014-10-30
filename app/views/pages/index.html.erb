@@ -1,6 +1,12 @@
-<md-toolbar md-theme="indigo" class="page-header">
-  <div class="md-toolbar-tools">
-    <span class="md-flex">Hyper Guides</span>
+<md-toolbar md-theme="indigo" class="page-header"
+  ng-controller="HeaderCtrl as headerCtrl">
+  <div class="md-toolbar-tools" layout="horizontal"
+    layout-align="space-between">
+    <div>Hyper Guides</div>
+
+    <md-button ng-click="headerCtrl.openLoginModal()"
+      class="md-default-theme" layout-align="end center"
+      aria-label="Open login dialog">Admin Login</md-button>
   </div>
 </md-toolbar>
 
