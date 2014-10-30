@@ -11,6 +11,9 @@ gem 'arel', github: 'rails/arel'
 # OpenBSD's bcrypt() password hashing algorithm
 gem 'bcrypt', '~> 3.1'
 
+# Simple authorization solution for Rails
+gem 'cancancan', '~> 1.9'
+
 # CoffeeScript adapter for the Rails asset pipeline
 gem 'coffee-rails', '~> 4.1'
 
