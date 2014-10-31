@@ -39,7 +39,7 @@ gem 'pry-rails', '~> 0.3'
 gem 'publishable', '~> 1.0'
 
 # Full-stack web application framework
-gem 'rails', '4.2.0.beta2'
+gem 'rails', '4.2.0.beta3'
 
 # A set of Rails responders to dry up your application
 gem 'responders', '~> 2.0'
