@@ -3,12 +3,12 @@
     <md-content class="md-padding" layout-fill>
       <div class="form-field" layout="horizontal" layout-padding>
         <label for="title" flex="25">Title</label>
-        <input type="text" id="title" ng-model="newGuideCtrl.guide.title" flex>
+        <input type="text" id="title" ng-model="newGuideCtrl.guide.title" required flex>
       </div>
 
       <div class="form-field" layout="horizontal" layout-padding>
         <label for="body" flex="25">Body</label>
-        <textarea id="body" ng-model="newGuideCtrl.guide.body" flex></textarea>
+        <textarea id="body" ng-model="newGuideCtrl.guide.body" required flex></textarea>
       </div>
     </md-content>
   </md-whiteframe>

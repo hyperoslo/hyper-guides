@@ -11,7 +11,7 @@
 </md-toolbar>
 
 <md-content class="md-padding main-content">
-  <form ng-submit="newGuideCtrl.submit()" novalidate>
+  <form ng-submit="newGuideCtrl.submit()" name="newGuideCtrl.form" novalidate>
     <md-tabs md-theme="indigo" selected="0">
       <md-tab label="Edit">
         <%= render 'form_fields' %>
@@ -25,7 +25,8 @@
     <md-content class="md-padding">
       <div class="form-actions">
         <md-button type="submit" class="md-raised md-primary"
-          md-theme="indigo" aria-label="Submit">Submit</md-button>
+          md-theme="indigo" ng-disabled="newGuideCtrl.form.$invalid"
+          aria-label="Submit">Submit</md-button>
         <md-button type="button" class="md-raised md-warn"
           ng-click="newGuideCtrl.reset()" md-theme="indigo"
           aria-label="Reset">Reset</md-button>
