@@ -10,10 +10,12 @@
     </div>
   </md-toolbar>
 
-  <md-content ng-hide="newGuideCtrl.guide.body">
-    <p><em>No body text written.</em></p>
-  </md-content>
+  <md-content class="md-padding">
+    <div ng-hide="newGuideCtrl.guide.body">
+      <p><em>No body text written.</em></p>
+    </div>
 
-  <md-content ng-bind-html="newGuideCtrl.guide.body | markdown"
-    ng-show="newGuideCtrl.guide.body"></md-content>
+    <div ng-bind-html="newGuideCtrl.guide.body | markdown"
+      ng-show="newGuideCtrl.guide.body"></div>
+  </md-content>
 </md-content>
