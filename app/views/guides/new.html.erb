@@ -26,8 +26,9 @@
       <div class="form-actions">
         <md-button type="submit" class="md-raised md-primary"
           md-theme="indigo" aria-label="Submit">Submit</md-button>
-        <md-button type="reset" class="md-raised md-warn"
-          md-theme="indigo" aria-label="Reset">Reset</md-button>
+        <md-button type="button" class="md-raised md-warn"
+          ng-click="newGuideCtrl.reset()" md-theme="indigo"
+          aria-label="Reset">Reset</md-button>
       </div>
     </md-content>
   </form>

@@ -2,6 +2,9 @@ angular.module("hyper-guides")
   .controller "NewGuideCtrl", ($mdToast, Guide) ->
     @guide = new Guide()
 
+    @reset = =>
+      @guide = new Guide()
+
     @submit = =>
       @guide.$save (guide) ->
         $mdToast.show
