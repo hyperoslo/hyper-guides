@@ -10,7 +10,11 @@ angular.module("hyper-guides")
 
       .when "/guides/new",
         templateUrl: "/guides/new.html"
+        controller: "NewGuideCtrl"
+        controllerAs: "newGuideCtrl"
 
       .when "/guides/:id",
         templateUrl: (params) ->
           "/guides/#{params.id}.html"
+        controller: "GuideCtrl"
+        controllerAs: "guideCtrl"

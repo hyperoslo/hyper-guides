@@ -1,17 +1,15 @@
-<div ng-controller="GuideCtrl as guideCtrl">
-  <md-toolbar md-theme="indigo" class="page-header"
-    ng-controller="HeaderCtrl as headerCtrl">
-    <div class="md-toolbar-tools" layout="horizontal"
-      layout-align="space-between">
-      <div>Hyper Guides &gt; {{ guideCtrl.guide.title }}</div>
+<md-toolbar md-theme="indigo" class="page-header"
+  ng-controller="HeaderCtrl as headerCtrl">
+  <div class="md-toolbar-tools" layout="horizontal"
+    layout-align="space-between">
+    <div>Hyper Guides &gt; {{ guideCtrl.guide.title }}</div>
 
-      <md-button ng-click="headerCtrl.openLoginModal()"
-        class="md-default-theme" layout-align="end center"
-        aria-label="Open login dialog">Admin Login</md-button>
-    </div>
-  </md-toolbar>
+    <md-button ng-click="headerCtrl.openLoginModal()"
+      class="md-default-theme" layout-align="end center"
+      aria-label="Open login dialog">Admin Login</md-button>
+  </div>
+</md-toolbar>
 
-  <md-content class="md-content-padding main-content"
-    ng-bind-html="guideCtrl.guide.body | markdown">
-  </md-content>
-</div>
+<md-content class="md-content-padding main-content"
+  ng-bind-html="guideCtrl.guide.body | markdown">
+</md-content>

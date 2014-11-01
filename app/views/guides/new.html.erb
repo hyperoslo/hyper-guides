@@ -1,36 +1,34 @@
-<div ng-controller="NewGuideCtrl as newGuideCtrl">
-  <md-toolbar md-theme="indigo" class="page-header"
-    ng-controller="HeaderCtrl as headerCtrl">
-    <div class="md-toolbar-tools" layout="horizontal"
-      layout-align="space-between">
-      <div>Hyper Guides &gt; New Guide</div>
+<md-toolbar md-theme="indigo" class="page-header"
+  ng-controller="HeaderCtrl as headerCtrl">
+  <div class="md-toolbar-tools" layout="horizontal"
+    layout-align="space-between">
+    <div>Hyper Guides &gt; New Guide</div>
 
-      <md-button ng-click="headerCtrl.openLoginModal()"
-        class="md-default-theme" layout-align="end center"
-        aria-label="Open login dialog">Admin Login</md-button>
-    </div>
-  </md-toolbar>
+    <md-button ng-click="headerCtrl.openLoginModal()"
+      class="md-default-theme" layout-align="end center"
+      aria-label="Open login dialog">Admin Login</md-button>
+  </div>
+</md-toolbar>
 
-  <md-content class="md-content-padding main-content">
-    <form ng-submit="newGuideCtrl.submit()" novalidate>
-      <md-tabs md-theme="indigo" selected="0">
-        <md-tab label="Edit">
-          <%= render 'form_fields' %>
-        </md-tab>
+<md-content class="md-content-padding main-content">
+  <form ng-submit="newGuideCtrl.submit()" novalidate>
+    <md-tabs md-theme="indigo" selected="0">
+      <md-tab label="Edit">
+        <%= render 'form_fields' %>
+      </md-tab>
 
-        <md-tab label="Preview">
-          <%= render 'preview' %>
-        </md-tab>
-      </md-tabs>
+      <md-tab label="Preview">
+        <%= render 'preview' %>
+      </md-tab>
+    </md-tabs>
 
-      <md-content class="md-content-padding">
-        <div class="form-actions">
-          <md-button type="submit" class="md-raised md-primary"
-            md-theme="indigo" aria-label="Submit">Submit</md-button>
-          <md-button type="reset" class="md-raised md-warn"
-            md-theme="indigo" aria-label="Reset">Reset</md-button>
-        </div>
-      </md-content>
-    </form>
-  </md-content>
-</div>
+    <md-content class="md-content-padding">
+      <div class="form-actions">
+        <md-button type="submit" class="md-raised md-primary"
+          md-theme="indigo" aria-label="Submit">Submit</md-button>
+        <md-button type="reset" class="md-raised md-warn"
+          md-theme="indigo" aria-label="Reset">Reset</md-button>
+      </div>
+    </md-content>
+  </form>
+</md-content>
