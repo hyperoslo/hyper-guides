@@ -9,7 +9,7 @@ angular.module("hyper-guides")
 
         $mdToast.show
           template: """
-            <md-toast md-theme="indigo">
+            <md-toast>
               Signed in successfully!
             </md-toast>
           """
@@ -19,14 +19,14 @@ angular.module("hyper-guides")
         if status == 422
           $mdToast.show
             template: """
-              <md-toast md-theme="indigo">
+              <md-toast>
                 Wrong username or password.
               </md-toast>
             """
         else
           $mdToast.show
             template: """
-              <md-toast md-theme="indigo">
+              <md-toast>
                 Something went wrong.
               </md-toast>
             """
