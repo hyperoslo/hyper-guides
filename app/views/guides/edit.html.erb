@@ -1,0 +1,36 @@
+<md-toolbar md-theme="indigo" class="page-header"
+  ng-controller="HeaderCtrl as headerCtrl">
+  <div class="md-toolbar-tools" layout="horizontal"
+    layout-align="space-between">
+    <div>Hyper Guides &gt; Edit Guide</div>
+
+    <md-button ng-click="headerCtrl.openLoginModal()"
+      class="md-default-theme" layout-align="end center"
+      aria-label="Open login dialog">Admin Login</md-button>
+  </div>
+</md-toolbar>
+
+<md-content class="md-padding main-content">
+  <form ng-submit="editGuideCtrl.submit()" name="editGuideCtrl.form" novalidate>
+    <md-tabs md-theme="indigo" selected="0">
+      <md-tab label="Edit">
+        <%= render 'form_fields', ctrl: 'editGuideCtrl' %>
+      </md-tab>
+
+      <md-tab label="Preview">
+        <%= render 'preview', ctrl: 'editGuideCtrl' %>
+      </md-tab>
+    </md-tabs>
+
+    <md-content class="md-padding">
+      <div class="form-actions">
+        <md-button type="submit" class="md-raised md-primary"
+          md-theme="indigo" ng-disabled="editGuideCtrl.form.$invalid"
+          aria-label="Submit">Submit</md-button>
+        <md-button type="button" class="md-raised md-warn"
+          ng-click="editGuideCtrl.reset()" md-theme="indigo"
+          aria-label="Reset">Reset</md-button>
+      </div>
+    </md-content>
+  </form>
+</md-content>

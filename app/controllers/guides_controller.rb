@@ -35,6 +35,24 @@ class GuidesController < ApplicationController
     respond_with @guide
   end
 
+  def edit
+    @guide = Guide.friendly.find params[:id]
+
+    authorize! :edit, @guide
+
+    respond_with @guide
+  end
+
+  def update
+    @guide = Guide.friendly.find params[:id]
+
+    authorize! :edit, @guide
+
+    @guide.update guide_params
+
+    respond_with @guide
+  end
+
   private
 
   def guide_params

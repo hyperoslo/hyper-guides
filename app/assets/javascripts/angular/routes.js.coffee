@@ -18,3 +18,9 @@ angular.module("hyper-guides")
           "/guides/#{params.id}.html"
         controller: "GuideCtrl"
         controllerAs: "guideCtrl"
+
+      .when "/guides/:id/edit",
+        templateUrl: (params) ->
+          "/guides/#{params.id}/edit.html"
+        controller: "EditGuideCtrl"
+        controllerAs: "editGuideCtrl"

@@ -123,4 +123,74 @@ RSpec.describe GuidesController, type: :controller do
     end
   end
 
+  describe "GET edit" do
+    context "when signed in" do
+      let(:user) { create :admin_user }
+      let(:guide) { create :guide }
+
+      before do
+        session[:user_id] = user.id
+        get :edit, id: guide.to_param
+      end
+
+      it "assigns the guide to @guide" do
+        expect(assigns(:guide)).to eq guide
+      end
+
+      it "renders the 'edit' template" do
+        expect(response).to render_template :edit
+      end
+    end
+
+    context "when not signed in" do
+      before { session[:user_id] = nil }
+
+      it "raises an ActiveRecord::NotFound error" do
+        expect { get :edit, id: guide.to_param }.to raise_error CanCan::AccessDenied
+      end
+    end
+  end
+
+  describe "PUT update" do
+    def put_update
+      put :update, id: guide.id, guide: new_guide_attrs
+    end
+
+    context "when signed in" do
+      let(:user) { create :admin_user }
+
+      before do
+        session[:user_id] = user.id
+        put_update
+        guide.reload
+      end
+
+      context "when given a valid set of attributes" do
+        let(:new_guide_attrs) { { title: "New guide title" } }
+
+        it "creates updates the guide" do
+          expect(guide.title).to eq "New guide title"
+        end
+      end
+
+      context "when given an invalid set of attributes" do
+        let(:new_guide_attrs) { { title: nil } } # invalid; title is required
+
+        it "does not update the guide" do
+          expect(guide.title).not_to eq "New guide title"
+        end
+      end
+    end
+
+    context "when not signed in" do
+      before { session[:user_id] = nil }
+
+      let(:new_guide_attrs) { attributes_for :guide }
+
+      it "raises an ActiveRecord::NotFound error" do
+        expect { put_update }.to raise_error CanCan::AccessDenied
+      end
+    end
+  end
+
 end
