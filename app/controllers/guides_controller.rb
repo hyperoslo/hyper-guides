@@ -4,6 +4,15 @@ class GuidesController < ApplicationController
   respond_to :html, :json
 
   def index
+    @guides = if current_user
+                Guide.all
+              else
+                Guide.published
+              end
+
+    authorize! :read, @guides
+
+    respond_with @guides
   end
 
   def show
@@ -15,7 +24,7 @@ class GuidesController < ApplicationController
 
     @guide = scope.find params[:id]
 
-    authorize! :show, @guide
+    authorize! :read, @guide
 
     respond_with @guide
   end
@@ -69,6 +78,7 @@ class GuidesController < ApplicationController
   private
 
   def guide_params
-    params.require(:guide).permit(:title, :slug, :body, :published_at)
+    params.require(:guide)
+      .permit(:title, :slug, :short_description, :body, :published_at)
   end
 end
