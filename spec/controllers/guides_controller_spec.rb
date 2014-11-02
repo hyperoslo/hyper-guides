@@ -5,6 +5,32 @@ RSpec.describe GuidesController, type: :controller do
   let(:guide) { create :guide }
 
   describe "GET index" do
+    let(:published_guides)   { create_list :published_guide, 3 }
+    let(:unpublished_guides) { create_list :unpublished_guide, 3 }
+    let(:all_guides)         { published_guides + unpublished_guides }
+
+    context "when signed in" do
+      before do
+        session[:user_id] = create(:admin_user).id
+        get :index
+      end
+
+      it "assigns all guides to @guides" do
+        expect(assigns(:guides)).to match_array all_guides
+      end
+    end
+
+    context "when not signed in" do
+      before do
+        session[:user_id] = nil
+        get :index
+      end
+
+      it "assigns published guides to @guides" do
+        expect(assigns(:guides)).to match_array published_guides
+      end
+    end
+
     it "returns http success" do
       get :index
       expect(response).to have_http_status :success

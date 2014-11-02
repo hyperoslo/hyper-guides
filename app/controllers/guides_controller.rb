@@ -4,27 +4,17 @@ class GuidesController < ApplicationController
   respond_to :html, :json
 
   def index
-    @guides = if current_user
-                Guide.all
-              else
-                Guide.published
-              end
+    scope = current_user ? Guide.all : Guide.published
 
-    authorize! :read, @guides
+    @guides = scope.order published_at: :desc
 
     respond_with @guides
   end
 
   def show
-    scope = if current_user
-              Guide.friendly
-            else
-              Guide.published.friendly
-            end
+    scope = current_user ? Guide.all : Guide.published
 
-    @guide = scope.find params[:id]
-
-    authorize! :read, @guide
+    @guide = scope.friendly.find params[:id]
 
     respond_with @guide
   end
