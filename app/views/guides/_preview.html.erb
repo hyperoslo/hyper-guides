@@ -1,4 +1,22 @@
 <md-content class="md-padding">
+  <h1>Index</h1>
+
+  <md-list>
+    <md-item>
+      <md-item-content>
+        <div class="md-tile-content">
+          <h3>{{ <%= ctrl %>.guide.title }}</h3>
+          <h4>{{ <%= ctrl %>.guide.published_at | date }}</h4>
+          <div ng-bind-html="<%= ctrl %>.guide.short_description | markdown"></div>
+        </div>
+      </md-item-content>
+    </md-item>
+  </md-list>
+
+  <md-divider></md-divider>
+
+  <h1>Show</h1>
+
   <md-toolbar>
     <div class="md-toolbar-tools">
       <span class="md-flex" ng-hide="<%= ctrl %>.guide.title">

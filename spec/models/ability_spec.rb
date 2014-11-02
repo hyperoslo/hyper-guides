@@ -20,6 +20,14 @@ RSpec.describe "A user" do
     it "cannot create guides" do
       expect(subject).not_to be_able_to :create, Guide
     end
+
+    it "cannot edit guides" do
+      expect(subject).not_to be_able_to :edit, Guide
+    end
+
+    it "cannot destroy guides" do
+      expect(subject).not_to be_able_to :destroy, Guide
+    end
   end
 
   context "when an admin" do

@@ -7,6 +7,13 @@ angular.module("hyper-guides")
     $routeProvider
       .when "/",
         templateUrl: "/?format=html"
+        controller: "GuidesCtrl"
+        controllerAs: "guidesCtrl"
+
+      .when "/guides",
+        templateUrl: "/guides.html"
+        controller: "GuidesCtrl"
+        controllerAs: "guidesCtrl"
 
       .when "/guides/new",
         templateUrl: "/guides/new.html"

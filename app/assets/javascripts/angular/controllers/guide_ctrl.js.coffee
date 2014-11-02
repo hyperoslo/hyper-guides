@@ -8,15 +8,11 @@ angular.module("hyper-guides")
           <md-bottom-sheet class="md-list">
             <md-list>
               <md-item ng-click="edit()">Edit guide</md-item>
+              <md-item ng-click="delete()">Delete guide</md-item>
             </md-list>
           </md-bottom-sheet>
         """
-        controller: ["$location", "$scope", "$mdBottomSheet", "guide", ($location, $scope, $mdBottomSheet, guide) ->
-          $scope.edit = ->
-            $location.path "/guides/#{guide.slug}/edit"
-            $mdBottomSheet.hide()
-        ]
-
+        controller: "GuideOptionsCtrl"
         locals:
           guide: @guide
 

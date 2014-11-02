@@ -1,0 +1,24 @@
+<md-toolbar class="page-header" ng-controller="HeaderCtrl as headerCtrl">
+  <div class="md-toolbar-tools">
+    <div>Hyper Guides</div>
+    <span flex></span>
+    <md-button ng-click="headerCtrl.openLoginModal()"
+      aria-label="Open login dialog">Admin Login</md-button>
+  </div>
+</md-toolbar>
+
+<md-content class="md-padding main-content">
+  <md-list>
+    <md-item ng-repeat="guide in guidesCtrl.guides">
+      <md-item-content>
+        <div class="md-tile-content">
+          <h3><a ng-href="/guides/{{ guide.slug }}">{{ guide.title }}</a></h3>
+          <h4 ng-show="guide.published_at">{{ guide.published_at | date }}</h4>
+          <h4 ng-hide="guide.published_at"><em>Unpublished</em></h4>
+          <div ng-bind-html="guide.short_description | markdown"></div>
+        </div>
+      </md-item-content>
+      <md-divider ng-hide="$last"></md-divider>
+    </md-item>
+  </md-list>
+</md-content>
