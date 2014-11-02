@@ -53,6 +53,16 @@ class GuidesController < ApplicationController
     respond_with @guide
   end
 
+  def destroy
+    @guide = Guide.friendly.find params[:id]
+
+    authorize! :destroy, @guide
+
+    @guide.destroy
+
+    respond_with @guide
+  end
+
   private
 
   def guide_params

@@ -193,4 +193,30 @@ RSpec.describe GuidesController, type: :controller do
     end
   end
 
+  describe "DELETE destroy" do
+    def delete_destroy
+      delete :destroy, id: guide.to_param
+    end
+
+    before { guide.save! }
+
+    context "when signed in" do
+      let(:user) { create :admin_user }
+
+      before { session[:user_id] = user.id }
+
+      it "deletes the guide" do
+        expect { delete_destroy }.to change(Guide, :count).by(-1)
+      end
+    end
+
+    context "when not signed in" do
+      before { session[:user_id] = nil }
+
+      it "raises a CanCan::AccessDenied error" do
+        expect { delete_destroy }.to raise_error CanCan::AccessDenied
+      end
+    end
+  end
+
 end
