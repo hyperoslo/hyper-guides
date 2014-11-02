@@ -8,6 +8,9 @@ angular.module("hyper-guides")
       .when "/",
         templateUrl: "/?format=html"
 
+      .when "/guides",
+        templateUrl: "/guides.html"
+
       .when "/guides/new",
         templateUrl: "/guides/new.html"
         controller: "NewGuideCtrl"

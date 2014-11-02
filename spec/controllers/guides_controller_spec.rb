@@ -4,6 +4,13 @@ RSpec.describe GuidesController, type: :controller do
 
   let(:guide) { create :guide }
 
+  describe "GET index" do
+    it "returns http success" do
+      get :index
+      expect(response).to have_http_status :success
+    end
+  end
+
   describe "GET show" do
     context "when the guide has been published" do
       let(:guide) { create :published_guide }

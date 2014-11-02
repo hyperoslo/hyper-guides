@@ -3,6 +3,9 @@ class GuidesController < ApplicationController
 
   respond_to :html, :json
 
+  def index
+  end
+
   def show
     scope = if current_user
               Guide.friendly
