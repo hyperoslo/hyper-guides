@@ -11,10 +11,11 @@ angular.module("hyper-guides")
             </md-list>
           </md-bottom-sheet>
         """
-        controller: ($location, $scope, $mdBottomSheet, guide) ->
+        controller: ["$location", "$scope", "$mdBottomSheet", "guide", ($location, $scope, $mdBottomSheet, guide) ->
           $scope.edit = ->
             $location.path "/guides/#{guide.slug}/edit"
             $mdBottomSheet.hide()
+        ]
 
         locals:
           guide: @guide
