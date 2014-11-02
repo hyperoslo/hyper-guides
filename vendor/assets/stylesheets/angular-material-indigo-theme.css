@@ -1,10 +1,10 @@
-md-backdrop.opaque.md-indigo-theme {
+md-backdrop.md-opaque.md-indigo-theme {
   background-color: rgba(0, 0, 0, 0.3); }
 
 md-bottom-sheet.md-indigo-theme {
   background-color: #fafafa;
   border-top-color: #bdbdbd; }
-  md-bottom-sheet.md-indigo-theme.list md-item {
+  md-bottom-sheet.md-indigo-theme.md-list md-item {
     color: rgba(0, 0, 0, 0.54); }
   md-bottom-sheet.md-indigo-theme .md-subheader {
     background-color: #fafafa; }
@@ -69,7 +69,7 @@ md-content.md-indigo-theme {
 md-dialog.md-indigo-theme {
   border-radius: 4px;
   background-color: #ffffff; }
-  md-dialog.md-indigo-theme.dialog-content-overflow .dialog-actions {
+  md-dialog.md-indigo-theme.md-content-overflow .md-actions {
     border-top-color: rgba(0, 0, 0, 0.12); }
 
 md-divider.md-indigo-theme {
@@ -77,18 +77,18 @@ md-divider.md-indigo-theme {
 
 md-progress-circular.md-indigo-theme {
   background-color: transparent; }
-  md-progress-circular.md-indigo-theme .circle .mask .fill {
+  md-progress-circular.md-indigo-theme .md-circle .md-mask .md-fill {
     background-color: #3f51b5; }
-  md-progress-circular.md-indigo-theme .inset {
+  md-progress-circular.md-indigo-theme .md-inset {
     background-color: #ffffff; }
 
-md-progress-linear.md-indigo-theme .container {
+md-progress-linear.md-indigo-theme .md-container {
   background-color: #c5cae9; }
-md-progress-linear.md-indigo-theme .bar {
+md-progress-linear.md-indigo-theme .md-bar {
   background-color: #3f51b5; }
-md-progress-linear.md-indigo-theme[mode=buffer] .dashed:before {
+md-progress-linear.md-indigo-theme[mode=buffer] .md-dashed:before {
   background: radial-gradient(#c5cae9 0%, #c5cae9 16%, transparent 42%); }
-md-progress-linear.md-indigo-theme[mode=buffer] .bar1 {
+md-progress-linear.md-indigo-theme[mode=buffer] .md-bar1 {
   background-color: #c5cae9; }
 
 md-radio-button.md-indigo-theme .md-container .md-ripple, md-switch.md-indigo-theme .md-switch-thumb .md-container .md-ripple {
@@ -105,30 +105,30 @@ md-radio-button.md-indigo-theme.md-checked .md-ink-ripple, md-switch.md-indigo-t
 md-radio-group.md-indigo-theme:focus {
   border-color: rgba(0, 0, 0, 0.73); }
 
-md-slider.md-indigo-theme .slider-track {
+md-slider.md-indigo-theme .md-track {
   background-color: rgba(0, 0, 0, 0.26); }
-md-slider.md-indigo-theme .slider-track-fill {
+md-slider.md-indigo-theme .md-track-fill {
   background-color: #3f51b5; }
-md-slider.md-indigo-theme .slider-thumb:after {
+md-slider.md-indigo-theme .md-thumb:after {
   border-color: #3f51b5;
   background-color: #3f51b5; }
-md-slider.md-indigo-theme .slider-sign {
+md-slider.md-indigo-theme .md-sign {
   background-color: #3f51b5; }
-  md-slider.md-indigo-theme .slider-sign:after {
+  md-slider.md-indigo-theme .md-sign:after {
     border-top-color: #3f51b5; }
-md-slider.md-indigo-theme .slider-thumb-text {
+md-slider.md-indigo-theme .md-thumb-text {
   color: white; }
-md-slider.md-indigo-theme .slider-focus-thumb {
+md-slider.md-indigo-theme .md-focus-thumb {
   background-color: rgba(0, 0, 0, 0.54); }
-md-slider.md-indigo-theme .slider-focus-ring {
+md-slider.md-indigo-theme .md-focus-ring {
   border-color: rgba(0, 0, 0, 0.12); }
-md-slider.md-indigo-theme .slider-disabled-thumb {
+md-slider.md-indigo-theme .md-disabled-thumb {
   border-color: #ffffff; }
-md-slider.md-indigo-theme.slider-min .slider-thumb:after {
+md-slider.md-indigo-theme.md-min .md-thumb:after {
   background-color: #ffffff; }
-md-slider.md-indigo-theme[disabled] .slider-thumb:after {
+md-slider.md-indigo-theme[disabled] .md-thumb:after {
   border-color: #bdbdbd; }
-md-slider.md-indigo-theme[disabled]:not(.slider-min) .slider-thumb:after {
+md-slider.md-indigo-theme[disabled]:not(.md-min) .md-thumb:after {
   background-color: #bdbdbd; }
 
 .md-subheader.md-indigo-theme {
@@ -142,7 +142,7 @@ md-switch.md-indigo-theme .md-switch-bar {
 md-switch.md-indigo-theme .md-switch-thumb:focus .md-label {
   border: 1px dotted black; }
 
-md-tabs.md-indigo-theme .tabs-header {
+md-tabs.md-indigo-theme .md-header {
   background-color: #3f51b5; }
 md-tabs.md-indigo-theme md-tabs-ink-bar {
   background: #ffff85; }
@@ -194,5 +194,5 @@ md-toolbar.md-indigo-theme {
 
 md-tooltip.md-indigo-theme {
   color: #ffffff; }
-  md-tooltip.md-indigo-theme .tooltip-background {
+  md-tooltip.md-indigo-theme .md-background {
     background-color: rgba(0, 0, 0, 0.52); }

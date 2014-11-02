@@ -1,3 +1,5 @@
+[![Build Status](https://circleci.com/gh/hyperoslo/hyper-guides.png?circle-token=140e3fdb33d6c1d3a3b0a20b53f0acd9f218690f)](https://circleci.com/gh/hyperoslo/hyper-guides)
+
 # Hyper Guides
 
 Miscellaneous guides for miscellaneous stuff by Hyper.

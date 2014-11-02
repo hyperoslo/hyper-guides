@@ -1,6 +1,6 @@
 <md-toolbar class="page-header" ng-controller="HeaderCtrl as headerCtrl">
   <div class="md-toolbar-tools">
-    <div>Hyper Guides &gt; New Guide</div>
+    <div>Hyper Guides &gt; Edit Guide</div>
     <span flex></span>
     <md-button ng-click="headerCtrl.openLoginModal()"
       aria-label="Open login dialog">Admin Login</md-button>
@@ -8,24 +8,24 @@
 </md-toolbar>
 
 <md-content class="md-padding main-content">
-  <form ng-submit="newGuideCtrl.submit()" name="newGuideCtrl.form" novalidate>
+  <form ng-submit="editGuideCtrl.submit()" name="editGuideCtrl.form" novalidate>
     <md-tabs selected="0">
       <md-tab label="Edit">
-        <%= render 'form_fields', ctrl: 'newGuideCtrl' %>
+        <%= render 'form_fields', ctrl: 'editGuideCtrl' %>
       </md-tab>
 
       <md-tab label="Preview">
-        <%= render 'preview', ctrl: 'newGuideCtrl' %>
+        <%= render 'preview', ctrl: 'editGuideCtrl' %>
       </md-tab>
     </md-tabs>
 
     <md-content class="md-padding">
       <div class="form-actions">
         <md-button type="submit" class="md-raised md-primary"
-          ng-disabled="newGuideCtrl.form.$invalid"
+          ng-disabled="editGuideCtrl.form.$invalid"
           aria-label="Submit">Submit</md-button>
         <md-button type="button" class="md-raised md-warn"
-          ng-click="newGuideCtrl.reset()"
+          ng-click="editGuideCtrl.reset()"
           aria-label="Reset">Reset</md-button>
       </div>
     </md-content>

@@ -1,19 +1,21 @@
-<md-content class="md-content-padding">
-  <md-toolbar md-theme="indigo">
+<md-content class="md-padding">
+  <md-toolbar>
     <div class="md-toolbar-tools">
-      <span class="md-flex" ng-hide="newGuideCtrl.guide.title">
+      <span class="md-flex" ng-hide="<%= ctrl %>.guide.title">
         <em>No title given</em>
       </span>
-      <span class="md-flex" ng-show="newGuideCtrl.guide.title">
-        {{ newGuideCtrl.guide.title }}
+      <span class="md-flex" ng-show="<%= ctrl %>.guide.title">
+        {{ <%= ctrl %>.guide.title }}
       </span>
     </div>
   </md-toolbar>
 
-  <md-content ng-hide="newGuideCtrl.guide.body">
-    <p><em>No body text written.</em></p>
-  </md-content>
+  <md-content class="md-padding">
+    <div ng-hide="<%= ctrl %>.guide.body">
+      <p><em>No body text written.</em></p>
+    </div>
 
-  <md-content ng-bind-html="newGuideCtrl.guide.body | markdown"
-    ng-show="newGuideCtrl.guide.body"></md-content>
+    <div ng-bind-html="<%= ctrl %>.guide.body | markdown"
+      ng-show="<%= ctrl %>.guide.body"></div>
+  </md-content>
 </md-content>

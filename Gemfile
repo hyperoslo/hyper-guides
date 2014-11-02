@@ -8,6 +8,12 @@ gem 'angularjs-rails', '~> 1.3'
 # SQL AST manager for Ruby
 gem 'arel', github: 'rails/arel'
 
+# OpenBSD's bcrypt() password hashing algorithm
+gem 'bcrypt', '~> 3.1'
+
+# Simple authorization solution for Rails
+gem 'cancancan', '~> 1.9'
+
 # CoffeeScript adapter for the Rails asset pipeline
 gem 'coffee-rails', '~> 4.1'
 
@@ -33,7 +39,7 @@ gem 'pry-rails', '~> 0.3'
 gem 'publishable', '~> 1.0'
 
 # Full-stack web application framework
-gem 'rails', '4.2.0.beta2'
+gem 'rails', '4.2.0.beta3'
 
 # A set of Rails responders to dry up your application
 gem 'responders', '~> 2.0'

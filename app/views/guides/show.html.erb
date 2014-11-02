@@ -1,11 +1,14 @@
-<div ng-controller="GuideCtrl as guideCtrl">
-  <md-toolbar md-theme="indigo">
-    <div class="md-toolbar-tools">
-      <span class="md-flex">Hyper Guides &gt; {{ guideCtrl.guide.title }}</span>
-    </div>
-  </md-toolbar>
+<md-toolbar class="page-header" ng-controller="HeaderCtrl as headerCtrl">
+  <div class="md-toolbar-tools">
+    <div>Hyper Guides &gt; {{ guideCtrl.guide.title }}</div>
+    <span flex></span>
+    <md-button ng-click="headerCtrl.openLoginModal()"
+      aria-label="Open login dialog">Admin Login</md-button>
+    <md-button ng-click="guideCtrl.openBottomSheet()"
+      aria-label="Open options sheet">Options</md-button>
+  </div>
+</md-toolbar>
 
-  <md-content class="md-content-padding main-content"
-    ng-bind-html="guideCtrl.guide.body | markdown">
-  </md-content>
-</div>
+<md-content class="md-padding main-content"
+  ng-bind-html="guideCtrl.guide.body | markdown">
+</md-content>
