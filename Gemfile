@@ -54,7 +54,7 @@ gem 'table_print', '~> 1.5'
 gem 'uglifier', '~> 2.7'
 
 # Sets the default server for Rack to Unicorn
-gem 'unicorn-rails', '~> 2.2'
+gem 'puma', '~> 2.11'
 
 group :development, :test do
   # Ruby 2.0 debugger
