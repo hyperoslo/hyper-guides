@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.3'
+ruby '2.2.0'
 
 # AngularJS assets for the Rails asset pipeline
 gem 'angularjs-rails', '~> 1.3'
