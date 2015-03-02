@@ -1,20 +1,20 @@
 <md-content class="md-padding">
   <md-whiteframe class="md-whiteframe-z1" layout layout-align="start">
     <md-content class="md-padding" layout-fill>
-      <div class="form-field" layout="row" layout-padding>
-        <label for="title" flex="25">Title</label>
-        <input type="text" id="title" ng-model="<%= ctrl %>.guide.title" required flex>
-      </div>
+      <md-input-container>
+        <label>Title</label>
+        <input type="text" ng-model="<%= ctrl %>.guide.title" required flex>
+      </md-input-container>
 
-      <div class="form-field" layout="row" layout-padding>
-        <label for="short_description" flex="25">Short description</label>
-        <textarea id="short_description" ng-model="<%= ctrl %>.guide.short_description" required flex></textarea>
-      </div>
+      <md-input-container>
+        <label>Short description</label>
+        <textarea ng-model="<%= ctrl %>.guide.short_description" required flex></textarea>
+      </md-input-container>
 
-      <div class="form-field" layout="row" layout-padding>
-        <label for="body" flex="25">Body</label>
-        <textarea id="body" ng-model="<%= ctrl %>.guide.body" required flex></textarea>
-      </div>
+      <md-input-container>
+        <label>Body</label>
+        <textarea ng-model="<%= ctrl %>.guide.body" required flex></textarea>
+      </md-input-container>
     </md-content>
   </md-whiteframe>
 </md-content>
