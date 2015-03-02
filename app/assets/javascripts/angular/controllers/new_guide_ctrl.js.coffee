@@ -7,7 +7,7 @@ angular.module("hyper-guides")
 
     @submit = =>
       @guide.$save (guide) ->
-        $location.path "/guides/#{guide.slug}"
+        $location.path guide.show_path
 
         $mdToast.show
           template: """

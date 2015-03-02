@@ -1,7 +1,7 @@
 angular.module("hyper-guides")
   .controller "GuideOptionsCtrl",($location, $scope, $mdBottomSheet, $mdToast, guide) ->
     $scope.edit = ->
-      $location.path "/guides/#{guide.slug}/edit"
+      $location.path guide.edit_path
       $mdBottomSheet.hide()
     $scope.delete = ->
       guide.$delete().then ->
